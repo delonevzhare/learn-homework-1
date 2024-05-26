@@ -21,7 +21,22 @@ def ask_user(answers_dict):
     """
     Замените pass на ваш код
     """
-    pass
+questions_and_answers = {
+                "Как дела?": "Хорошо!",
+                "Что делаешь?": "Программирую!"
+                }
+            
+
+def ask_user(answers_dict):
+    while True:
+        user_question = input('Введите вопрос: ')
+        if user_question in questions_and_answers:
+            print(f'Ответ: {questions_and_answers[user_question]}')
+        else:
+            print(f'Ответ на вопрос {user_question} не найден')
+    
+
+ask_user(questions_and_answers)
     
 if __name__ == "__main__":
     ask_user(questions_and_answers)
